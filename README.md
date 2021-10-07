@@ -1,4 +1,4 @@
-# Oxylabs’ Residential Proxies integration with Selenium
+# Oxylabs’ Residential Proxies integration with MechanicalSoup
 
 [<img src="https://img.shields.io/static/v1?label=&message=Python&color=brightgreen" />](https://github.com/topics/python) [<img src="https://img.shields.io/static/v1?label=&message=Mechanical%20Soup&color=orange" />](https://github.com/topics/mechanicalsoup) [<img src="https://img.shields.io/static/v1?label=&message=Web-Scraping&color=yellow" />](https://github.com/topics/web-scraping) [<img src="https://img.shields.io/static/v1?label=&message=Rotating%20Proxies&color=blueviolet" />](https://github.com/topics/rotating-proxies)
 
