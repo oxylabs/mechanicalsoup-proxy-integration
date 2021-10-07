@@ -1,5 +1,3 @@
-import sys
-
 import mechanicalsoup
 
 # Credentials of your Oxylabs' account
@@ -8,22 +6,20 @@ PASSWORD = "your_password"
 END_POINT = "pr.oxylabs.io:7777"
 
 proxies = {
-"http": f"http://{USER}:{PASSWORD}@{END_POINT}",
-"https": f"http://{USER}:{PASSWORD}@{END_POINT}"
+    "http": f"http://{USER}:{PASSWORD}@{END_POINT}",
+    "https": f"http://{USER}:{PASSWORD}@{END_POINT}",
 }
 
-# Initiating a MechanicalSoup object
-browser = mechanicalsoup.StatefulBrowser()
-browser.session.proxies = proxies 
-
-def foo():
+def get_html_form(proxies):
+    # Initiate a MechanicalSoup object
+    browser = mechanicalsoup.StatefulBrowser()
+    browser.session.proxies = proxies 
     try:
-        browser.open("https://ip.oxylabs.io/") 
-    except Exception:
-        exc_type, value, traceback = sys.exc_info()
-        return f"{exc_type.__name__}: Wrong account credentials!"
+        browser.open("https://httpbin.org/forms/post") 
+    except Exception as e:
+        return e
 
-    # Selecting a form in HTML using a CSS Selector
+    # Select a form in HTML using a CSS Selector
     form = browser.select_form('form[action="/post"]')
 
     form_info = {
@@ -33,18 +29,18 @@ def foo():
         "size": "small",
         "topping": ("bacon", "cheese", "onion"),
         "delivery": "18:30",
-        "comments": "I like pizza"
+        "comments": "I like pizza",
     }
 
-    # Iterating over a dictionary object (form_info) 
+    # Iterate over a dictionary object (form_info) 
     # to populate the form fields with the defined values
     for key, value in form_info.items():
         form.set(key, value)
 
-    # Launching a Browser
+    # Launch a Browser
     browser.launch_browser()
     response = browser.submit_selected()
     return response.text
 
 if __name__ == "__main__":
-    print(foo())
+    print(get_html_form(proxies))
