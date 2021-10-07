@@ -17,12 +17,12 @@ You can do it using `pip` command:
 ```bash
 pip install mechanicalsoup
 ```
-`Python 3` or higher
+`Python 3` or higher<br>
 Residential Proxies: https://oxylabs.io/products/residential-proxy-pool
 
 ## Proxy Authentication
 For proxies to work, you'll need to specify your account credentials inside the 
-[main.py](https://github.com/oxylabs/selenium-proxy-integration/blob/main/main.py) file.
+[main.py](https://github.com/oxylabs/mechanicalsoup-proxy-integration/blob/main/main.py) file:
 
 ```python
 USERNAME = "your_username"
