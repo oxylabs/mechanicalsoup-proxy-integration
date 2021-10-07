@@ -6,9 +6,9 @@
 for automating web interactions such as submitting forms, following links and redirects. Since it
 is built on using Python `requests` and `BeautifulSoup` libraries, `MechanicalSoup` is often used
 as a library to perform some web-scraping operations, such as image extraction, due to the powerful 
-integrated functions that comes in with it. In this tutorial, we're going to cover how you can 
-integrate Oxylabs' Residential Proxies with MechanicalSoup and share a code sample for submitting an
-HTML form while using proxies.
+integrated functions that comes in with it. 
+In this tutorial, we're going to cover how you can integrate Oxylabs' Residential Proxies with 
+MechanicalSoup and share a code sample for submitting an HTML form while using proxies.
 
 ## Requirements
 
