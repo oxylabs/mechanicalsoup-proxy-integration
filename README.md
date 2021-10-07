@@ -1,10 +1,10 @@
 # Oxylabs’ Residential Proxies integration with Selenium
 
-[<img src="https://img.shields.io/static/v1?label=&message=Python&color=brightgreen" />](https://github.com/topics/python) [<img src="https://img.shields.io/static/v1?label=&message=MechanicalSoup&color=orange" />](https://github.com/topics/mechanicalsoup) [<img src="https://img.shields.io/static/v1?label=&message=Web-Scraping&color=yellow" />](https://github.com/topics/web-scraping) [<img src="https://img.shields.io/static/v1?label=&message=Rotating%20Proxies&color=blueviolet" />](https://github.com/topics/rotating-proxies)
+[<img src="https://img.shields.io/static/v1?label=&message=Python&color=brightgreen" />](https://github.com/topics/python) [<img src="https://img.shields.io/static/v1?label=&message=Mechanical%20Soup&color=Orange" />](https://github.com/topics/mechanicalsoup) [<img src="https://img.shields.io/static/v1?label=&message=Web-Scraping&color=yellow" />](https://github.com/topics/web-scraping) [<img src="https://img.shields.io/static/v1?label=&message=Rotating%20Proxies&color=blueviolet" />](https://github.com/topics/rotating-proxies)
 
 [Mechanical Soup](https://github.com/MechanicalSoup/MechanicalSoup) is a Python library designed
-for automating web interactions such as submitting forms, following links and redirects. 
-Since it's built on using Python `requests` and `BeautifulSoup` libraries, `MechanicalSoup` 
+for automating web interactions such as submitting forms, following links and redirects. Since it
+is built on using Python `requests` and `BeautifulSoup` libraries, `MechanicalSoup` 
 is often used as a library to perform some web-scraping operations, such as image extraction,
 due to the powerful integrated functions that comes in with it. In this tutorial, we're going
 to cover how you can integrate Oxylabs' Residential Proxies with MechanicalSoup and share a code
@@ -38,9 +38,9 @@ To see if the proxy is working, try visiting ip.oxylabs.io. <br>If everything is
 it will return an IP address of a proxy that you're using.
 
 ## Identifying an HTML form
-Identifying an HTML form in MechanicalSoup is relatively easy - all you have to do is to locate it via CSS selector using a 
-`select_form` method. It returns a `soup` object that can be later retrieved using `form` attribute. Here's an example of 
-locating a form and printing its input fields.
+Identifying an HTML form in MechanicalSoup is relatively easy - all you have to do is to locate it
+via CSS selector using a `select_form` method. It returns a `soup` object that can be later 
+retrieved using `form` attribute. Here's an example of locating a form and printing its input fields.
 ```python
 import sys
 
@@ -128,5 +128,5 @@ def foo():
 if __name__ == "__main__":
     print(foo())
 ```
-If you're having any trouble integrating proxies with MechanicalSoup and this guide didn't help you - 
-feel free to contact Oxylabs customer support at support@oxylabs.io.
+If you're having any trouble integrating proxies with MechanicalSoup and this guide didn't help 
+you - feel free to contact Oxylabs customer support at support@oxylabs.io.
