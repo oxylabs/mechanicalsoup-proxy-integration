@@ -1,6 +1,6 @@
 import mechanicalsoup
 
-# Credentials of your Oxylabs' account
+# Credentials of your Oxylabs' account.
 USER = "your_username"
 PASSWORD = "your_password"
 END_POINT = "pr.oxylabs.io:7777"
@@ -11,7 +11,7 @@ proxies = {
 }
 
 def get_html_form(proxies):
-    # Initiate a MechanicalSoup object
+    # Initiate a MechanicalSoup object.
     browser = mechanicalsoup.StatefulBrowser()
     browser.session.proxies = proxies 
     try:
@@ -19,7 +19,7 @@ def get_html_form(proxies):
     except Exception as e:
         return e
 
-    # Select a form in HTML using a CSS Selector
+    # Select a form in HTML using a CSS Selector.
     form = browser.select_form('form[action="/post"]')
 
     form_info = {
@@ -33,11 +33,11 @@ def get_html_form(proxies):
     }
 
     # Iterate over a dictionary object (form_info) 
-    # to populate the form fields with the defined values
+    # to populate the form fields with the defined values.
     for key, value in form_info.items():
         form.set(key, value)
 
-    # Launch a Browser
+    # Launch a Browser.
     browser.launch_browser()
     response = browser.submit_selected()
     return response.text
