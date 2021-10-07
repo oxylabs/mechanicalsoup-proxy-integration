@@ -35,8 +35,8 @@ Adjust the `your_username` and `your_password` fields with the username and pass
 of your Oxylabs account.
 
 ## Testing Proxy Connection
-To see if the proxy is working, try visiting ip.oxylabs.io. <br>If everything is working correctly, 
-it will return an IP address of a proxy that you're using.
+To see if the proxy is working, try visiting https://ip.oxylabs.io. If everything is working
+correctly, it will return an IP address of a proxy that you're using.
 
 ## Identifying an HTML form
 Identifying an HTML form in MechanicalSoup is relatively easy - all you have to do is to locate it
