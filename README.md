@@ -90,8 +90,8 @@ PASSWORD = "your_password"
 ENDPOINT = "pr.oxylabs.io:7777"
 
 proxies = {
-    "http": f"http://{USER}:{PASSWORD}@{END_POINT}",
-    "https": f"http://{USER}:{PASSWORD}@{END_POINT}",
+    "http": f"http://{USER}:{PASSWORD}@{ENDPOINT}",
+    "https": f"http://{USER}:{PASSWORD}@{ENDPOINT}",
 }
 
 def get_html_form(proxies):
