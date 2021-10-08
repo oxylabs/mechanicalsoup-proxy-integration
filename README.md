@@ -71,7 +71,7 @@ def get_html_form(proxies):
 
     # Select a form in HTML using a CSS Selector.
     form = browser.select_form('form[action="/post"]')
-    # Print form fields.
+    # Print the form field data.
     return form.print_summary()
 
 
