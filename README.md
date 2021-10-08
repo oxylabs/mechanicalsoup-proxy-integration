@@ -18,13 +18,13 @@ You can do it using `pip` command:
 pip install mechanicalsoup
 ```
 
-`Python 3` or higher
+`Python 3` or higher<br>
 Residential Proxies: https://oxylabs.io/products/residential-proxy-pool
 
 ## Proxy Authentication
 
-For proxies to work, you'll need to specify your account credentials inside the 
-[main.py](https://github.com/oxylabs/selenium-proxy-integration/blob/main/main.py) file.
+For proxies to work, you'll need to specify your Oxylabs Residnential Proxy access credentials inside the 
+[main.py](https://github.com/oxylabs/mechanicalsoup-proxy-integration/blob/main2/main.py) file.
 
 ```python
 USERNAME = "your_username"
@@ -32,24 +32,25 @@ PASSWORD = "your_password"
 HOST = "pr.oxylabs.io"
 PORT = 7777
 ```
-Adjust the `your_username` and `your_password` fields with the username and password 
-of your Oxylabs account.
+Adjust the `your_username` and `your_password` values with the username and password 
+of your Oxylabs Residential Proxy access credentials.
 
 ## Testing Proxy Connection
 
 To see if the proxy is working, try visiting ip.oxylabs.io. <br>If everything is working correctly, 
 it will return an IP address of a proxy that you're using.
 
-## Locating an HTML form
+## Locating an HTML Form
 
 Locating an HTML form in MechanicalSoup is relatively easy - all you have to do is to select it
 via CSS selector using a `select_form` method. It returns a `soup` object that can be later 
-retrieved using `form` attribute. Here's an example of locating a form and printing its input fields.
+retrieved using `form` attribute. Here's an example of locating a form and printing its values in
+the input fields.
 
 ```python
 import mechanicalsoup
 
-# Credentials of your Oxylabs' account.
+# Credentials of Oxylabs' Residential Proxy access.
 USER = "your_username"
 PASSWORD = "your_password"
 END_POINT = "pr.oxylabs.io:7777"
@@ -64,32 +65,15 @@ def get_html_form(proxies):
     browser = mechanicalsoup.StatefulBrowser()
     browser.session.proxies = proxies 
     try:
-        browser.open("https://ip.oxylabs.io/") 
+        browser.open("https://httpbin.org/forms/post") 
     except Exception as e:
         return e
 
     # Select a form in HTML using a CSS Selector.
     form = browser.select_form('form[action="/post"]')
+    # Print form fields.
+    return form.print_summary()
 
-    form_info = {
-        "custname": "Jonas",
-        "custtel": "123",
-        "custemail": "info@example.com",
-        "size": "small",
-        "topping": ("bacon", "cheese", "onion"),
-        "delivery": "18:30",
-        "comments": "I like pizza",
-    }
-
-    # Iterate over a dictionary object (form_info) 
-    # to populate the form fields with the defined values.
-    for key, value in form_info.items():
-        form.set(key, value)
-
-    # Launch a Browser.
-    browser.launch_browser()
-    response = browser.submit_selected()
-    return response.text
 
 if __name__ == "__main__":
     print(get_html_form(proxies))
@@ -100,7 +84,7 @@ if __name__ == "__main__":
 ```python
 import mechanicalsoup
 
-# Credentials of your Oxylabs' account.
+# Credentials for Oxylabs' Residential Proxy access.
 USER = "your_username"
 PASSWORD = "your_password"
 END_POINT = "pr.oxylabs.io:7777"
@@ -123,7 +107,7 @@ def get_html_form(proxies):
     form = browser.select_form('form[action="/post"]')
 
     form_info = {
-        "custname": "Jonas",
+        "custname": "John",
         "custtel": "123",
         "custemail": "info@example.com",
         "size": "small",
@@ -132,8 +116,7 @@ def get_html_form(proxies):
         "comments": "I like pizza",
     }
 
-    # Iterate over a dictionary object (form_info) 
-    # to populate the form fields with the defined values.
+    # Populate the form with values from the `form_info` dict.
     for key, value in form_info.items():
         form.set(key, value)
 
@@ -141,6 +124,7 @@ def get_html_form(proxies):
     browser.launch_browser()
     response = browser.submit_selected()
     return response.text
+
 
 if __name__ == "__main__":
     print(get_html_form(proxies))

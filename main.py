@@ -1,6 +1,6 @@
 import mechanicalsoup
 
-# Credentials of your Oxylabs' account.
+# Credentials of Oxylabs Residential Proxy access.
 USER = "your_username"
 PASSWORD = "your_password"
 END_POINT = "pr.oxylabs.io:7777"
@@ -23,7 +23,7 @@ def get_html_form(proxies):
     form = browser.select_form('form[action="/post"]')
 
     form_info = {
-        "custname": "Jonas",
+        "custname": "John",
         "custtel": "123",
         "custemail": "info@example.com",
         "size": "small",
@@ -32,8 +32,7 @@ def get_html_form(proxies):
         "comments": "I like pizza",
     }
 
-    # Iterate over a dictionary object (form_info) 
-    # to populate the form fields with the defined values.
+    # Populate the form with values from the `form_info` dict.
     for key, value in form_info.items():
         form.set(key, value)
 
@@ -41,6 +40,7 @@ def get_html_form(proxies):
     browser.launch_browser()
     response = browser.submit_selected()
     return response.text
+
 
 if __name__ == "__main__":
     print(get_html_form(proxies))
