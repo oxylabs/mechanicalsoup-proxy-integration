@@ -64,11 +64,8 @@ def get_html_form(proxies):
     # Initiate a MechanicalSoup object.
     browser = mechanicalsoup.StatefulBrowser()
     browser.session.proxies = proxies 
-    try:
-        browser.open("https://httpbin.org/forms/post") 
-    except Exception as e:
-        return e
-
+    browser.open("https://httpbin.org/forms/post") 
+    
     # Select a form in HTML using a CSS Selector.
     form = browser.select_form('form[action="/post"]')
     # Print the form field data.
@@ -98,10 +95,7 @@ def get_html_form(proxies):
     # Initiate a MechanicalSoup object.
     browser = mechanicalsoup.StatefulBrowser()
     browser.session.proxies = proxies 
-    try:
-        browser.open("https://httpbin.org/forms/post") 
-    except Exception as e:
-        return e
+    browser.open("https://httpbin.org/forms/post") 
 
     # Select a form in HTML using a CSS Selector.
     form = browser.select_form('form[action="/post"]')
