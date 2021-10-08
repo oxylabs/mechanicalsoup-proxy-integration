@@ -29,8 +29,7 @@ For proxies to work, you'll need to specify your Oxylabs Residential Proxy acces
 ```python
 USERNAME = "your_username"
 PASSWORD = "your_password"
-HOST = "pr.oxylabs.io"
-PORT = 7777
+ENDPOINT = "pr.oxylabs.io:7777"
 ```
 Adjust the `your_username` and `your_password` values with the username and password 
 of your Oxylabs Residential Proxy access credentials.
@@ -53,11 +52,11 @@ import mechanicalsoup
 # Credentials of Oxylabs' Residential Proxy access.
 USER = "your_username"
 PASSWORD = "your_password"
-END_POINT = "pr.oxylabs.io:7777"
+ENDPOINT = "pr.oxylabs.io:7777"
 
 proxies = {
-    "http": f"http://{USER}:{PASSWORD}@{END_POINT}",
-    "https": f"http://{USER}:{PASSWORD}@{END_POINT}",
+    "http": f"http://{USER}:{PASSWORD}@{ENDPOINT}",
+    "https": f"http://{USER}:{PASSWORD}@{ENDPOINT}",
 }
 
 def get_html_form(proxies):
@@ -87,7 +86,7 @@ import mechanicalsoup
 # Credentials for Oxylabs' Residential Proxy access.
 USER = "your_username"
 PASSWORD = "your_password"
-END_POINT = "pr.oxylabs.io:7777"
+ENDPOINT = "pr.oxylabs.io:7777"
 
 proxies = {
     "http": f"http://{USER}:{PASSWORD}@{END_POINT}",

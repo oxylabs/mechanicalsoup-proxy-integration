@@ -3,11 +3,11 @@ import mechanicalsoup
 # Credentials of Oxylabs Residential Proxy access.
 USER = "your_username"
 PASSWORD = "your_password"
-END_POINT = "pr.oxylabs.io:7777"
+ENDPOINT = "pr.oxylabs.io:7777"
 
 proxies = {
-    "http": f"http://{USER}:{PASSWORD}@{END_POINT}",
-    "https": f"http://{USER}:{PASSWORD}@{END_POINT}",
+    "http": f"http://{USER}:{PASSWORD}@{ENDPOINT}",
+    "https": f"http://{USER}:{PASSWORD}@{ENDPOINT}",
 }
 
 def get_html_form(proxies):
