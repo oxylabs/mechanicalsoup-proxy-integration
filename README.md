@@ -25,7 +25,7 @@ Residential Proxies: https://oxylabs.io/products/residential-proxy-pool
 ## Proxy Authentication
 
 For proxies to work, you'll need to specify your Oxylabs Residential Proxy access credentials inside the 
-[main.py](https://github.com/oxylabs/mechanicalsoup-proxy-integration/blob/main2/main.py) file.
+[main.py](https://github.com/oxylabs/mechanicalsoup-proxy-integration/blob/main/main.py) file.
 
 ```python
 USERNAME = "your_username"
