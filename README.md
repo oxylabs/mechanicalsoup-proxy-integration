@@ -18,7 +18,7 @@ You can do it using `pip` command:
 pip install mechanicalsoup
 ```
 
-`Python 3` or higher<br>
+`Python 3` or higher<br><br>
 Residential Proxies: https://oxylabs.io/products/residential-proxy-pool
 
 ## Proxy Authentication
