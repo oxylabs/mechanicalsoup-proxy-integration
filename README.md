@@ -20,7 +20,7 @@ pip install mechanicalsoup
 
 `Python 3` or higher
 
-Residential Proxies: (https://oxy.yt/urSrl)
+Residential Proxies: https://oxy.yt/urSrl
 
 ## Proxy Authentication
 
